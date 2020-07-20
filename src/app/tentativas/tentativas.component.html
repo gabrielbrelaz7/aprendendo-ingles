@@ -1,0 +1,13 @@
+<div class="boxContainer">
+    
+    <div class ="row offset-1">
+
+        <div *ngFor='let coracao of coracoes' class="col-3">
+            <div class="box">
+                <img [src] ='coracao.exibeCoracao()'>
+            </div>
+        </div>
+
+    </div>
+
+</div>

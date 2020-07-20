@@ -1,0 +1,49 @@
+
+<div class="container">
+    <div class="jumbotron">
+        <div class= "row">
+                <div class="col-sm-6">
+                    <app-progresso [progresso] ="progresso"></app-progresso>
+                </div>
+                <div class="offset-sm-3 offset-md-2 offset-lg-3 col-md-4 col-lg-3 col-sm-3">
+                    <app-tentativas [tentativas]="tentativas"></app-tentativas>
+                </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-12">
+            <div class="boxContainerNoBorder">
+                <h2>{{instrucao}}</h2>
+                <div>{{rodadaFrase.fraseEng}}</div>
+            </div>
+
+            </div>
+
+            <div class="col-12">
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" 
+                    (input)="atualizarResposta($event)"
+                    [value] = "resposta"
+                    ></textarea>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="offset-lg-10 col-lg-2">
+                <div class="boxContainerNoBorder">
+                    <div class="btn btn-block btn-primary">
+                        <button (click)="verificarResposta()">Verificar</button>                 
+                    </div>
+                </div>    
+            </div>
+        </div>
+    
+    </div>
+
+
+</div>
+
